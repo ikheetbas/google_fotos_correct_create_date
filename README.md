@@ -1,4 +1,4 @@
-# 📸 Google Photos Date Sync Script 
+# 📸 Google Fotos Correct Create Date
 
 *Of hoe je Google's "geweldige" metadata export weer een beetje bruikbaar maakt* 🙄
 
@@ -39,15 +39,15 @@ sudo yum install jq
 
 ### Script installeren
 ```bash
-# Download het script
-git clone https://github.com/jouw-username/google-photos-sync.git
-cd google-photos-sync
+# Download het project
+git clone https://github.com/jouw-username/google_fotos_correct_create_date.git
+cd google_fotos_correct_create_date
 
-# Maak het uitvoerbaar
-chmod +x sync_photo_dates.sh
+# Maak het script uitvoerbaar
+chmod +x json-createdate-photo-createdate_v2.sh
 
 # Optioneel: Maak het globaal beschikbaar
-sudo cp sync_photo_dates.sh /usr/local/bin/sync-google-photos
+sudo cp json-createdate-photo-createdate_v2.sh /usr/local/bin/google-fotos-fix
 ```
 
 ## 🎮 Gebruik
@@ -55,22 +55,22 @@ sudo cp sync_photo_dates.sh /usr/local/bin/sync-google-photos
 ### Basis gebruik
 ```bash
 # In de directory met je foto's en JSON bestanden
-./sync_photo_dates.sh
+./json-createdate-photo-createdate_v2.sh
 
 # Of als je het globaal geïnstalleerd hebt
-sync-google-photos
+google-fotos-fix
 ```
 
 ### Voor de voorzichtigen onder ons
 ```bash
 # Dry-run (kijken wat er zou gebeuren zonder iets kapot te maken)
-./sync_photo_dates.sh -n -v
+./json-createdate-photo-createdate_v2.sh -n -v
 
 # Recursief door alle subdirectories
-./sync_photo_dates.sh -r
+./json-createdate-photo-createdate_v2.sh -r
 
 # Specifieke directory
-./sync_photo_dates.sh -d ~/Downloads/Google-Photos-Export-Van-De-Hel
+./json-createdate-photo-createdate_v2.sh -d ~/Downloads/Google-Photos-Export-Van-De-Hel
 ```
 
 ### Alle opties
@@ -116,13 +116,13 @@ Je hebt jq niet geïnstalleerd. Zie installatie instructies hierboven.
 Google heeft niet voor alle foto's metadata meegeleverd. Typisch Google. 🤷‍♂️
 
 ### "Permission denied"
-Maak het script uitvoerbaar: `chmod +x sync_photo_dates.sh`
+Maak het script uitvoerbaar: `chmod +x json-createdate-photo-createdate_v2.sh`
 
 ## 🎭 Voorbeelden
 
 ```bash
 # Gewoon doen
-./sync_photo_dates.sh
+./json-createdate-photo-createdate_v2.sh
 
 # Output:
 # ✓ vakantie001.jpg -> 15-08-2023 14:30:25
